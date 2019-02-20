@@ -1,1 +1,4 @@
-doll/
+/doll/*
+
+# Editor config
+.idea
