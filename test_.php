@@ -24,7 +24,7 @@
                         <img src="doll/logo.jpg" alt="..." class="img-thumbnail">
                         <br/>
                         <br/>
-                        <h2>เกี่ยวกับร้านค้า</h2>
+                        <h2>เกี่ยวกับร้านค้าจ้า</h2>
                         <p>
                         ร้านขายตุ๊กตา sanrio <br/>
                         Premjai's shop<br/>
