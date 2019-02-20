@@ -1,5 +1,9 @@
 <?php require_once("connect.php"); ?>
-<?php require_once 'includes/header.php'; ?>
+
+<!doctype html>
+<html>
+
+<?php require_once 'includes/head.php'; ?>
 
 <body>
     <div class="container">
