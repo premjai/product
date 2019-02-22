@@ -3,7 +3,7 @@
 <!doctype html>
 <html>
 
-<?php require_once 'includes/head.php'; ?>
+<?php require_once('includes/head.php'); ?>
 
 <body>
     <div class="container">
@@ -13,9 +13,9 @@
 
         <div class="row">
             <div class="col-3">
-                <?php require_once 'includes/shop_detail.php'; ?>
+                <?php require_once('includes/shop_detail.php'); ?>
                 ➖➖➖➖➖➖➖➖➖➖➖➖
-                <?php require_once 'includes/login_form.php'?>
+                <?php require_once('includes/login_form.php')?>
                 ➖➖➖➖➖➖➖➖➖➖➖➖
             </div>
 
@@ -36,19 +36,19 @@
                             <p class="card-text">ชื่อสินค้า : <?php echo $objResult['product_name']; ?></p>
                             <p class="card-text">ราคาสินค้า : <?php echo $objResult['price']; ?> บาท</p>
                             <a href="product.php?id=<?php echo $objResult['product_id']; ?>" class="btn btn-primary">detail</a>
-                            <a href="#" class="btn btn-primary">ใส่ตะกร้า</a>
                         </div>
                     </div>
                     <?php
-                        if ($idx === 3) {
+                        if ($idx == 3) {
                             echo '</div><div class="card-deck">';
+                            $idx = 0;
                         }
-                        ++$idx;
+                        $idx++;
+                    }
                     ?>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 </html>

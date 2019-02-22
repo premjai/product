@@ -78,7 +78,6 @@ require_once("connect.php");
                                 <p class="card-text">ชื่อสินค้า : <?php echo $objResult['product_name']; ?></p>
                                 <p class="card-text">ราคาสินค้า : <?php echo $objResult['price']; ?> บาท</p>
                                 <a href="product.php?id=<?php echo $objResult['product_id']; ?>" class="btn btn-primary">detail</a>
-                                <a href="#" class="btn btn-primary">ใส่ตะกร้า</a>
                                 </div>
                             </div>
 
