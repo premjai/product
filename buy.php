@@ -4,12 +4,24 @@
 	
 	$id = mysqli_real_escape_string($con,$_POST['product_id']);
     $price = mysqli_real_escape_string($con,$_POST['price']);
-    $qty = mysqli_real_escape_string($con,$_POST['txtqty']);
+	$qty = mysqli_real_escape_string($con,$_POST['txtqty']);
 
-	$strSQL = "INSERT INTO `cart` (`id`, `product_id`, `price`, `qty`) VALUES (NULL, '$id', '$price', '$qty') ";
+	$total = $price * $qty;
+	
+
+
+	$strSQL = "INSERT INTO `cart` (`id`, `product_id`, `price`, `qty`, `total`) VALUES (NULL, '$id', '$price', '$qty', '$total') ";
+	
 
 //	$strSQL = "SELECT * FROM users WHERE username = '".$username."' and password = '".$password."'";
+	
 	$objQuery = mysqli_query($con, $strSQL);
+
+	mysqli_close($con);
+
+	
+	header("Location:viewcart.php");
+	
 	// $objResult = mysqli_fetch_array($objQuery, MYSQLI_ASSOC);
 
 	// if(!$objResult)
@@ -31,6 +43,6 @@
 		// }
 			
 //	}
-	mysqli_close($con);
+
 ?>
 

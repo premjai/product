@@ -1,4 +1,4 @@
-<img src="doll/logo.jpg" class="img-thumbnail">
+<img src="pic/logo.jpg" class="img-thumbnail">
 <br/>
 <br/>
 <h2>เกี่ยวกับร้านค้า</h2>

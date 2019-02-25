@@ -30,7 +30,7 @@
                         while($objResult = mysqli_fetch_array($objQuery, MYSQLI_ASSOC)) {
                     ?>
                     <div class="card text-white bg-dark mb-3">
-                        <img src="doll/<?php echo $objResult['image']; ?>" class="card-img-top">
+                        <img src="pic/<?php echo $objResult['image']; ?>" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">รหัสสินค้า : <?php echo $objResult['product_id']; ?></h5>
                             <p class="card-text">ชื่อสินค้า : <?php echo $objResult['product_name']; ?></p>

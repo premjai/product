@@ -36,7 +36,7 @@ $pid = $_GET['id']
                         ?>
 
                     <div class="card text-white bg-dark mb-3">
-                            <img src="doll/<?php echo $objResult['image']; ?>" class="card-img-top">
+                            <img src="pic/<?php echo $objResult['image']; ?>" class="card-img-top">
                             <div class="card-body">
                             <h5 class="card-title">รหัสสินค้า : <?php echo $objResult['product_id']; ?></h5>
                             <p class="card-text">ชื่อสินค้า : <?php echo $objResult['product_name']; ?></p>
@@ -44,6 +44,7 @@ $pid = $_GET['id']
                            
                             <form method="post" action="buy.php">
                                 <div class="form-group">
+                               
                                     <label for="txtqty">จำนวน</label>
                                     <input type="text" class="form-control" name="txtqty"/>
                                 </div>
@@ -54,8 +55,8 @@ $pid = $_GET['id']
 
                                     <input type="hidden" class="form-control" name="product_id" value="<?php echo $objResult['product_id']; ?>"/>
                                 
-                                <a href="viewcart.php?id=<?php echo $objResult['product_id']; ?>" class="btn btn-primary">detail</a>
-                                <button type="submit" class="btn btn-primary">OK</button>
+                                <button type="submit">OK</button>
+                                
                                
                             </form>
                                               
