@@ -49,14 +49,12 @@ $pid = $_GET['id']
                                     <input type="text" class="form-control" name="txtqty"/>
                                 </div>
 
-                             
                                     <input type="hidden" class="form-control" name="price" value="<?php echo $objResult['price']; ?>"/>
                                 
-
                                     <input type="hidden" class="form-control" name="product_id" value="<?php echo $objResult['product_id']; ?>"/>
                                 
-                                <button type="submit">OK</button>
-                                
+                                <button class="btn btn-primary" type="submit">OK</button>
+                                                  
                                
                             </form>
                                               

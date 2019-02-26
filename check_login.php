@@ -6,7 +6,7 @@
 	$username = mysqli_real_escape_string($con,$_POST['username']);
 	$password = mysqli_real_escape_string($con,$_POST['password']);
 
-	$strSQL = "SELECT * FROM users WHERE username = '".$username."' and password = '".$password."'";
+	$strSQL = "SELECT * FROM member WHERE username = '".$username."' and password = '".$password."'";
 	$objQuery = mysqli_query($con, $strSQL);
 	$objResult = mysqli_fetch_array($objQuery, MYSQLI_ASSOC);
 
@@ -18,7 +18,7 @@
 	else
 	{
 		$_SESSION['passlogin'] = "y";
-		header("Location:index_.php");
+		header("Location:address.php");
 
 
 

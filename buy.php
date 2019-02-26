@@ -1,6 +1,8 @@
 <?php
 	session_start();
 	require_once("connect.php");
+
+	$session_id = session_id();
 	
 	$id = mysqli_real_escape_string($con,$_POST['product_id']);
     $price = mysqli_real_escape_string($con,$_POST['price']);
@@ -10,7 +12,7 @@
 	
 
 
-	$strSQL = "INSERT INTO `cart` (`id`, `product_id`, `price`, `qty`, `total`) VALUES (NULL, '$id', '$price', '$qty', '$total') ";
+	$strSQL = "INSERT INTO `cart` (`id`, `product_id`, `price`, `qty`, `total`, `session_id`) VALUES (NULL, '$id', '$price', '$qty', '$total', '$session_id') ";
 	
 
 //	$strSQL = "SELECT * FROM users WHERE username = '".$username."' and password = '".$password."'";
