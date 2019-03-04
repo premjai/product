@@ -14,7 +14,7 @@ $pid = $_GET['id']
         <div class="container">
 
         <div class="alert alert-light" role="alert">
-            <h2>Sanrio Bear <i class="far fa-heart fa-xs"></i> </h2>
+        <a href="index_refactor.php"><h2>Sanrio Bear <i class="far fa-heart fa-xs"></i> </h2></a>
         </div>
                     
             <div class="row">
@@ -24,8 +24,9 @@ $pid = $_GET['id']
     
                 </div>
                 <div class="col-9">
-                    <h3><u>Detail</u></h3>
-                    <hr>
+                <div class="card">
+                    <h3 class="card-header">Detail <i class="far fa-heart fa-xs"></i></h3>
+                <div class="card-body">
                     <div class="card-deck">
                         <?php
                             $idx=1;
@@ -35,7 +36,7 @@ $pid = $_GET['id']
                             while($objResult = mysqli_fetch_array($objQuery, MYSQLI_ASSOC)){
                         ?>
 
-                    <div class="card text-white bg-dark mb-3">
+                    <div class="card text-white bg-info mb-3">
                             <img src="pic/<?php echo $objResult['image']; ?>" class="card-img-top">
                             <div class="card-body">
                             <h5 class="card-title">รหัสสินค้า : <?php echo $objResult['product_id']; ?></h5>
@@ -73,7 +74,8 @@ $pid = $_GET['id']
                             $idx++;
                         }
                     ?>
-
+                </div>
+                </div>
                 </div>
                 </div>
             </div>

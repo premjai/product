@@ -4,7 +4,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $db = "premjai";
+    $db = "prem";
 
     // Create connection
     $mysqli = new mysqli($servername, $username, $password, $db);
@@ -19,13 +19,13 @@
     $Name = $_POST['name'];
     $Status = $_POST['status'];
  
-   echo $strSQL = " INSERT INTO `users` (`UserID`, `Username`, `Password`, `Name`, `Status`) 
+   echo $strSQL = " INSERT INTO `member` (`UserID`, `Username`, `Password`, `Name`, `Status`) 
     VALUES (NULL, '$Username', '$Password', '$Name', '$Status') ";
 
     $result = $mysqli->query($strSQL);
 
     if ($result->num_rows >= 0) {
-        header("Location:index_.html");
+        header("Location:index_refactor.php");
     } else {
         header("Location:register.php");
     }

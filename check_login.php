@@ -2,6 +2,8 @@
 	session_start();
 
 	require_once("connect.php");
+
+	$session_id = session_id();
 	
 	$username = mysqli_real_escape_string($con,$_POST['username']);
 	$password = mysqli_real_escape_string($con,$_POST['password']);
@@ -12,12 +14,21 @@
 
 	if(!$objResult)
 	{
-		echo "username and password Incorrect!";
-		exit();
+		header("Location:loginpage.php");
+		// echo "username and password Incorrect!";
+		// exit();
 	}
 	else
 	{
-		$_SESSION['passlogin'] = "y";
+		$memberid = $objResult['UserID'];
+
+		$sql = "UPDATE `cart` SET `mem_id` = '$memberid' WHERE `cart`.`session_id` = '$session_id'";
+		$result = mysqli_query($con, $sql);
+
+		
+		$_SESSION['memberlogin'] = "y";
+		$_SESSION['memberid'] = $memberid;
+
 		header("Location:address.php");
 
 

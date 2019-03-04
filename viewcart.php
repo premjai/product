@@ -15,7 +15,7 @@ $session_id = session_id();
         <div class="container">
 
         <div class="alert alert-light" role="alert">
-            <h2>Sanrio Bear <i class="far fa-heart fa-xs"></i> </h2>
+            <a href="index_refactor.php"><h2>Sanrio Bear <i class="far fa-heart fa-xs"></i> </h2></a>
         </div>
                     
             <div class="row">
@@ -26,9 +26,10 @@ $session_id = session_id();
     
                 </div>
                 <div class="col-9">
-                
-                <h3><u>ชำระเงิน</u></h3>
-                    <table class="table table-striped table-dark">
+                <div class="card">
+                <h3 class="card-header">ชำระเงิน <i class="far fa-heart fa-xs"></i></h3>
+                <div class="card-body">
+                    <table class="table table-striped table-info">
                     <thead>
                         <tr>
                         <th scope="col">รหัสสินค้า</th>
@@ -68,11 +69,13 @@ $session_id = session_id();
                 ?>               
                 </tbody>
                 </table>
-                <h4><p class="text-right">ราคาที่ต้องชำระ <?php echo $totalpay; ?>  บาท</p></h4>
-                <button class="btn btn-primary" type="submit">Check Out</button>
+                <h2><p class="text-right">ราคาที่ต้องชำระ <?php echo $totalpay; ?>  บาท</p></h2>
+                <p class="text-right"><a href="address.php" class="btn btn-primary">Check Out</a></p>
 
-                    </div>
-                    </div>
-                    </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
             </body>
             </html>
